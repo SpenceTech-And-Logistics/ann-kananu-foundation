@@ -166,7 +166,7 @@ export const why = [
   {
     icon: "chart",
     tag: "Expertise",
-    text: "NCCF operates at the unique intersection of nutrition, primary healthcare and chronic disease management. Our team brings deep expertise in evidence-driven interventions, clinical nutrition protocols and health systems strengthening. We understand Kenya’s healthcare landscape and design solutions that integrate seamlessly with existing structures.",
+    text: "NCCP operates at the unique intersection of nutrition, primary healthcare and chronic disease management. Our team brings deep expertise in evidence-driven interventions, clinical nutrition protocols and health systems strengthening. We understand Kenya’s healthcare landscape and design solutions that integrate seamlessly with existing structures.",
   },
   {
     icon: "leaf",

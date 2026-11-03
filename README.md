@@ -1,6 +1,6 @@
 # Ann Kananu Foundation website
 
-Six-page React and Vite site for the Ann Kananu Foundation's Nutrition & Chronic Care Foundation (NCCF) programme. All content lives in `src/data/site.js`.
+Six-page React and Vite site for the Ann Kananu Foundation's Nutrition & Chronic Care Project (NCCP) programme. All content lives in `src/data/site.js`.
 
 ## Run it
 
