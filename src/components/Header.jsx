@@ -11,8 +11,11 @@ export default function Header() {
     <header className="header">
       <div className="wrap header-row">
         <Link className="brand" to="/">
-          <strong>{org.name}</strong>
-          <span>{org.tagline}</span>
+          <img src="/logo.webp" alt="" width="60" height="60" />
+          <div>
+            <strong>{org.name}</strong>
+            <span>{org.tagline}</span>
+          </div>
         </Link>
         <button className="menu-btn" aria-expanded={open} aria-controls="site-nav" onClick={() => setOpen(!open)}>
           {open ? 'Close' : 'Menu'}

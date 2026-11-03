@@ -7,6 +7,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="wrap footer-grid">
         <div>
+          <img className="footer-logo" src="/logo.webp" alt={`${org.name} logo`} width="112" height="112" loading="lazy" />
           <p className="footer-name">{org.name}</p>
           <p>{org.tagline}</p>
           <p className="footer-sub">{org.programme} ({org.short}), {org.country}</p>
