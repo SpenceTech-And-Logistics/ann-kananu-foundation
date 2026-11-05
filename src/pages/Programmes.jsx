@@ -27,7 +27,10 @@ export default function Programmes() {
               </article>
             ))}
           </div>
-          <Link className="btn btn-purple" to="/impact">See milestones and results</Link>
+          <div className="actions">
+            <Link className="btn btn-purple" to="/donate">Donate</Link>
+            <Link className="btn btn-outline" to="/impact">See milestones and results</Link>
+          </div>
         </div>
       </section>
     </>

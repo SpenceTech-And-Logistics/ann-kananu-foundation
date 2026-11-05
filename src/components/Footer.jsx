@@ -14,6 +14,7 @@ export default function Footer() {
         </div>
         <nav aria-label="Footer">
           {nav.map(([to, label]) => <Link key={to} to={to}>{label}</Link>)}
+          <Link to="/donate">Donate</Link>
         </nav>
         <div className="footer-contact">
           {org.phone && <a href={telHref}>{org.phone}</a>}

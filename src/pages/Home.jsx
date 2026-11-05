@@ -15,8 +15,8 @@ export default function Home() {
           <h1>{vision.title}</h1>
           <p className="hero-sub">{org.sub}</p>
           <div className="actions">
-            <Link className="btn btn-gold" to="/programmes">See our programmes</Link>
-            <Link className="btn btn-line" to="/get-involved">Get involved</Link>
+            <Link className="btn btn-gold" to="/donate">Donate</Link>
+            <Link className="btn btn-line" to="/programmes">See our programmes</Link>
           </div>
         </div>
       </section>

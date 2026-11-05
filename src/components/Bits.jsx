@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
-import { context, org } from '../data/site.js'
+import { Link } from 'react-router-dom'
+import { context, org, ways } from '../data/site.js'
 import Count from './Count.jsx'
 import Icon from './Icon.jsx'
 
@@ -8,6 +9,17 @@ export function usePage(title, description) {
     document.title = title ? `${title} | ${org.name}` : `${org.name} | ${org.tagline}`
     document.querySelector('meta[name="description"]')?.setAttribute('content', description || `${org.sub}.`)
   }, [title, description])
+}
+
+export function DonateBand() {
+  return (
+    <section className="donate-band">
+      <div className="wrap">
+        <p>{ways.find((w) => w.tag === 'Donate').text}</p>
+        <Link className="btn btn-purple" to="/donate">Donate</Link>
+      </div>
+    </section>
+  )
 }
 
 export function PageHead({ title, lead }) {

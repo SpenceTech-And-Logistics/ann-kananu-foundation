@@ -17,14 +17,17 @@ export default function Header() {
             <span>{org.tagline}</span>
           </div>
         </Link>
-        <button className="menu-btn" aria-expanded={open} aria-controls="site-nav" onClick={() => setOpen(!open)}>
-          {open ? 'Close' : 'Menu'}
-        </button>
-        <nav id="site-nav" className={open ? 'nav open' : 'nav'} aria-label="Main">
-          {nav.map(([to, label]) => (
-            <NavLink key={to} to={to} end={to === '/'}>{label}</NavLink>
-          ))}
-        </nav>
+        <div className="header-end">
+          <nav id="site-nav" className={open ? 'nav open' : 'nav'} aria-label="Main">
+            {nav.map(([to, label]) => (
+              <NavLink key={to} to={to} end={to === '/'}>{label}</NavLink>
+            ))}
+          </nav>
+          <Link className="btn btn-gold btn-small" to="/donate">Donate</Link>
+          <button className="menu-btn" aria-expanded={open} aria-controls="site-nav" onClick={() => setOpen(!open)}>
+            {open ? 'Close' : 'Menu'}
+          </button>
+        </div>
       </div>
     </header>
   )

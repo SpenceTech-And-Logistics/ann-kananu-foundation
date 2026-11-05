@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { funding, org, ways } from '../data/site.js'
 import { usePage, PageHead } from '../components/Bits.jsx'
 import { mailHref } from '../components/contact.js'
@@ -5,7 +6,6 @@ import Icon from '../components/Icon.jsx'
 
 const actions = {
   Partner: ['Email us about partnering', 'Partnership enquiry'],
-  Donate: ['Email us about donating', 'Donation enquiry'],
   'Learn more': ['Request the programme deck', 'Programme deck request'],
 }
 
@@ -19,6 +19,7 @@ export default function GetInvolved() {
           <div>
             <p className="funding-ask">{funding.ask}</p>
             <p className="funding-label">{funding.askLabel}</p>
+            <div className="actions"><Link className="btn btn-gold" to="/donate">Donate</Link></div>
           </div>
           <div>
             <h2>What the funding covers</h2>
@@ -36,7 +37,9 @@ export default function GetInvolved() {
                 <span className="plate"><Icon name={w.icon} /></span>
                 <h3>{w.tag}</h3>
                 <p>{w.text}</p>
-                {org.email && <a className="text-link" href={mailHref(actions[w.tag][1])}>{actions[w.tag][0]}</a>}
+                {w.tag === 'Donate'
+                  ? <Link className="text-link" to="/donate">Go to the donation page</Link>
+                  : org.email && <a className="text-link" href={mailHref(actions[w.tag][1])}>{actions[w.tag][0]}</a>}
               </article>
             ))}
           </div>

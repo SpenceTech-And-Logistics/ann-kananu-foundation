@@ -9,6 +9,8 @@ import Impact from './pages/Impact.jsx'
 import GetInvolved from './pages/GetInvolved.jsx'
 import Contact from './pages/Contact.jsx'
 import NotFound from './pages/NotFound.jsx'
+import Donate from './pages/Donate.jsx'
+import { DonateBand } from './components/Bits.jsx'
 
 export default function App() {
   const { pathname } = useLocation()
@@ -33,9 +35,11 @@ export default function App() {
           <Route path="/impact" element={<Impact />} />
           <Route path="/get-involved" element={<GetInvolved />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/donate" element={<Donate />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+      {pathname !== '/donate' && <DonateBand />}
       <Footer />
     </>
   )

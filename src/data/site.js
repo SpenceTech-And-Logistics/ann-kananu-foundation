@@ -204,3 +204,9 @@ export const ways = [
     text: "Ask for the full programme deck, our protocols and how we measure results.",
   },
 ];
+
+// Donate page. Add the foundation's own payment details here and they appear on the page.
+// Example: { label: "M-Pesa", lines: [["Paybill", "000000"], ["Account", "DONATE"]] }
+export const donate = {
+  accounts: [],
+};
