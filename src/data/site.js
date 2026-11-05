@@ -8,8 +8,9 @@ export const org = {
   short: "NCCP",
   sub: "Strengthening nutrition-centred chronic care systems in Kenya",
   country: "Kenya",
-  phone: "+254 723008165",
-  email: "yvonne.malebe@africaskoni.co.ke",
+  // Add the phone number and email here. Contact links appear across the site once filled in.
+  phone: "",
+  email: "",
 };
 
 export const nav = [

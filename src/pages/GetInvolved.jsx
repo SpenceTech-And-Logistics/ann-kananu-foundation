@@ -1,4 +1,4 @@
-import { funding, ways } from '../data/site.js'
+import { funding, org, ways } from '../data/site.js'
 import { usePage, PageHead } from '../components/Bits.jsx'
 import { mailHref } from '../components/contact.js'
 import Icon from '../components/Icon.jsx'
@@ -36,7 +36,7 @@ export default function GetInvolved() {
                 <span className="plate"><Icon name={w.icon} /></span>
                 <h3>{w.tag}</h3>
                 <p>{w.text}</p>
-                <a className="text-link" href={mailHref(actions[w.tag][1])}>{actions[w.tag][0]}</a>
+                {org.email && <a className="text-link" href={mailHref(actions[w.tag][1])}>{actions[w.tag][0]}</a>}
               </article>
             ))}
           </div>

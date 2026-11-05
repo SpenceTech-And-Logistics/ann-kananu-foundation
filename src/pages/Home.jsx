@@ -15,7 +15,7 @@ export default function Home() {
           <h1>{vision.title}</h1>
           <p className="hero-sub">{org.sub}</p>
           <div className="actions">
-            <Link className="btn btn-mango" to="/programmes">See our programmes</Link>
+            <Link className="btn btn-gold" to="/programmes">See our programmes</Link>
             <Link className="btn btn-line" to="/get-involved">Get involved</Link>
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <Link className="btn btn-beet" to="/get-involved">Get involved</Link>
+          <Link className="btn btn-purple" to="/get-involved">Get involved</Link>
         </div>
       </section>
     </>

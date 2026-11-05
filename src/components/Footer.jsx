@@ -16,8 +16,8 @@ export default function Footer() {
           {nav.map(([to, label]) => <Link key={to} to={to}>{label}</Link>)}
         </nav>
         <div className="footer-contact">
-          <a href={telHref}>{org.phone}</a>
-          <a href={`mailto:${org.email}`}>{org.email}</a>
+          {org.phone && <a href={telHref}>{org.phone}</a>}
+          {org.email && <a href={`mailto:${org.email}`}>{org.email}</a>}
         </div>
       </div>
       <div className="wrap footer-end">

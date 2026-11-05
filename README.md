@@ -23,4 +23,4 @@ npx wrangler deploy
 
 - Milestones and results: confirm whether the figures are reached or targeted, then word the Impact page to match.
 - National figures: confirm the sources, especially that 57% of deaths are malnutrition-linked alongside NCDs at 27% of all deaths.
-- Contact email: confirm that the africaskoni.co.ke address is the public one.
+- Contact details: add the phone number and email to `org` in `src/data/site.js`. The footer, Contact page and Get involved links appear automatically.

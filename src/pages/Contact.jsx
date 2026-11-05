@@ -3,22 +3,30 @@ import { usePage, PageHead } from '../components/Bits.jsx'
 import { telHref } from '../components/contact.js'
 
 export default function Contact() {
-  usePage('Contact', `Call or email the ${org.name}.`)
+  const ready = org.phone || org.email
+  const lead = ready ? `Call or email the ${org.name}.` : 'Contact details are coming soon.'
+  usePage('Contact', lead)
   return (
     <>
-      <PageHead title="Contact" lead={`Call or email the ${org.name}.`} />
-      <section className="section">
-        <div className="wrap contact">
-          <div>
-            <h2>Call</h2>
-            <a href={telHref}>{org.phone}</a>
+      <PageHead title="Contact" lead={lead} />
+      {ready && (
+        <section className="section">
+          <div className="wrap contact">
+            {org.phone && (
+              <div>
+                <h2>Call</h2>
+                <a href={telHref}>{org.phone}</a>
+              </div>
+            )}
+            {org.email && (
+              <div>
+                <h2>Email</h2>
+                <a href={`mailto:${org.email}`}>{org.email}</a>
+              </div>
+            )}
           </div>
-          <div>
-            <h2>Email</h2>
-            <a href={`mailto:${org.email}`}>{org.email}</a>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
     </>
   )
 }

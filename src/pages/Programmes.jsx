@@ -27,7 +27,7 @@ export default function Programmes() {
               </article>
             ))}
           </div>
-          <Link className="btn btn-beet" to="/impact">See milestones and results</Link>
+          <Link className="btn btn-purple" to="/impact">See milestones and results</Link>
         </div>
       </section>
     </>
